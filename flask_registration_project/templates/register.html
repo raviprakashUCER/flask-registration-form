@@ -1,0 +1,25 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.name.label }} {{ form.name() }}
+    {% if form.name.errors %}
+        <p>{{ form.name.errors[0] }}</p>
+    {% endif %}
+
+    {{ form.email.label }} {{ form.email() }}
+    {% if form.email.errors %}
+        <p>{{ form.email.errors[0] }}</p>
+    {% endif %}
+
+    {{ form.password.label }} {{ form.password() }}
+    {% if form.password.errors %}
+        <p>{{ form.password.errors[0] }}</p>
+    {% endif %}
+
+    {{ form.confirm_password.label }} {{ form.confirm_password() }}
+    {% if form.confirm_password.errors %}
+        <p>{{ form.confirm_password.errors[0] }}</p>
+    {% endif %}
+
+    {{ form.submit() }}
+</form>
